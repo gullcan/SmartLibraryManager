@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.AddBookController">
+
+    <Label text="Yeni Kitap Ekle" style="-fx-font-size: 16px;"/>
+
+    <TextField fx:id="isbnField" promptText="ISBN"/>
+    <TextField fx:id="titleField" promptText="Kitap Adı"/>
+    <TextField fx:id="authorField" promptText="Yazar"/>
+    <Button text="Ekle" onAction="#handleAddBook"/>
+</VBox>

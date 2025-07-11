@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml" fx:controller="controller.LoginController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Giriş Yap" style="-fx-font-size: 18px;"/>
+    <TextField fx:id="emailField" promptText="E-posta"/>
+    <PasswordField fx:id="passwordField" promptText="Şifre"/>
+    <Button fx:id="loginButton" text="Giriş" onAction="#handleLogin"/>
+    <Button fx:id="registerButton" text="Kayıt Ol" onAction="#goToRegister" />
+
+</VBox>

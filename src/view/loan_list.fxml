@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.LoanListController">
+
+    <top>
+        <Label text="Ödünç Alınan Kitaplar" style="-fx-font-size: 18px; -fx-padding: 10px;"/>
+    </top>
+
+    <center>
+        <ListView fx:id="loanListView"/>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" alignment="CENTER">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Button text="Seçili Kitabı İade Et" onAction="#handleReturnBook"/>
+        </HBox>
+    </bottom>
+</BorderPane>

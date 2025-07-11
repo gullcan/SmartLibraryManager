@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.DashboardController">
+
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Smart Library Dashboard" style="-fx-font-size: 20px;"/>
+            <Button fx:id="addBookButton" text="Yeni Kitap Ekle" onAction="#openAddBookWindow"/>
+            <Button fx:id="logoutButton" text="Çıkış Yap" onAction="#handleLogout"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <!-- Kitap Listesi -->
+            <Label text="Kitaplar"/>
+            <ListView fx:id="bookListView" prefHeight="150"/>
+
+            <!-- Admin Tablosu -->
+            <Label fx:id="loanTableLabel" text="Tüm Ödünç Alınan Kitaplar" visible="false"/>
+            <TableView fx:id="loanTable" visible="false" prefHeight="200">
+                <columns>
+                    <TableColumn fx:id="bookCol" text="Kitap" prefWidth="150"/>
+                    <TableColumn fx:id="userCol" text="Kullanıcı" prefWidth="120"/>
+                    <TableColumn fx:id="emailCol" text="E-posta" prefWidth="180"/>
+                    <TableColumn fx:id="borrowDateCol" text="Alım Tarihi" prefWidth="100"/>
+                    <TableColumn fx:id="returnDateCol" text="İade Tarihi" prefWidth="100"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" alignment="CENTER">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Button text="Seçili Kitabı Ödünç Al" onAction="#handleBorrowBook"/>
+            <Button fx:id="showLoansButton" text="Ödünç Alınanları Göster" onAction="#openLoanList"/>
+            <Button fx:id="showUnreturnedButton" text="İade Edilmeyenleri Göster" onAction="#handleShowUnreturned"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
+

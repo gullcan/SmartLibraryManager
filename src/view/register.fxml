@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.RegisterController">
+    <Label text="Kullanıcı Kaydı"/>
+
+    <TextField fx:id="nameField" promptText="Ad Soyad"/>
+    <TextField fx:id="emailField" promptText="E-posta"/>
+    <PasswordField fx:id="passwordField" promptText="Şifre"/>
+    <Button text="Kayıt Ol" onAction="#handleRegister"/>
+    <Label fx:id="messageLabel"/>
+</VBox>
