@@ -1,6 +1,5 @@
 package model;
 
-// Base class
 public class Book {
     private String isbn;
     private String title;

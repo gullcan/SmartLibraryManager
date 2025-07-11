@@ -9,11 +9,9 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.Button;
+import java.io.IOException;
 import model.User;
 import util.DBUtil;
-
-import java.io.IOException;
-
 
 public class LoginController {
 
@@ -66,6 +64,5 @@ public class LoginController {
         Stage stage = (Stage) registerButton.getScene().getWindow();
         stage.setScene(new Scene(root));
     }
-
 
 }

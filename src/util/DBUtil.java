@@ -19,7 +19,7 @@ public class DBUtil {
 
     public static Connection connect() {
         try {
-            Class.forName("org.sqlite.JDBC"); // Driver'ı yükle
+            Class.forName("org.sqlite.JDBC");
             return DriverManager.getConnection(DB_URL);
         } catch (ClassNotFoundException e) {
             System.out.println("SQLite JDBC driver bulunamadı!");

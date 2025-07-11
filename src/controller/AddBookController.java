@@ -7,8 +7,6 @@ import javafx.stage.Stage;
 import model.Book;
 import util.DBUtil;
 
-
-
 public class AddBookController {
 
     @FXML
@@ -19,7 +17,6 @@ public class AddBookController {
     private TextField authorField;
 
     private DashboardController dashboardController;
-
 
     public void setDashboardController(DashboardController controller) {
         this.dashboardController = controller;

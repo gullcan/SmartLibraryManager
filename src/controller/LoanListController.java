@@ -3,11 +3,10 @@ package controller;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ListView;
+import java.util.List;
 import javafx.stage.Stage;
 import model.Loan;
 import util.DBUtil;
-
-import java.util.List;
 
 public class LoanListController {
 
